@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Aplicativo de perguntas e respostas</title>
+</head>
+<body>
+    <h1>Aplicativo de perguntas e respostas</h1>
+
+    <div class="pergunta">
+        <p>Qual é a capital do Brasil?</p>
+    </div>
+
+    <div class="respostas">
+        <input type="radio" name="resposta" value="1"> São Paulo
+        <input type="radio" name="resposta" value="2"> Rio de Janeiro
+        <input type="radio" name="resposta" value="3"> Brasília
+        <input type="radio" name="resposta" value="4"> Curitiba
+    </div>
+
+    <div class="botao">
+        <button type="button" onclick="verificarResposta()">Enviar</button>
+    </div>
+
+    <script>
+        function verificarResposta() {
+            var resposta = document.querySelector("input[name='resposta']:checked").value;
+
+            if (resposta == 3) {
+                alert("Resposta correta!");
+            } else {
+                alert("Resposta incorreta!");
+            }
+        }
+    </script>
+</body>
+</html>
